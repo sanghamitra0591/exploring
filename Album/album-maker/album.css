@@ -1,0 +1,71 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+    text-align: center;
+    color: white;
+    padding: 5px;
+    background-image: url("https://static.vecteezy.com/system/resources/thumbnails/000/686/259/small/teal-geometric-background.jpg");
+    margin: 0px;
+    margin-bottom: 5px;
+}
+#nav{
+    display: flex;
+    background-image: url("https://image.shutterstock.com/image-photo/turquoise-paper-texture-background-260nw-574171801.jpg");
+    padding: 15px 25px;
+    justify-content: space-between;
+    align-items: center;
+}
+#nav>a{
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+}
+#nav>a:nth-child(1){
+    padding: 5px 16px;
+    background-color: white;
+    border-radius: 10px;
+    color: teal;
+}
+#nav>a:nth-child(1):hover{
+    background-image: url("https://static.vecteezy.com/system/resources/thumbnails/000/686/259/small/teal-geometric-background.jpg");
+    color: white;
+}
+#btns{
+    width: 58%;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+    display: flex;
+    padding: 20px;
+}
+#btns>button{
+    border: none;
+    color: white;
+    font-size: 20px;
+    border-radius: 5px;
+    padding: 10px 40px;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHxmYJeLu_MuPRaMw7Qu4oD_pGjGZi2wOrWg&usqp=CAU");
+}
+#btns>button:hover{
+    color: black;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqQfHzIUCEuGPGDkLDJGxyhZvEcGDpgtJ2TQ&usqp=CAU");
+}
+#delay{
+    width: 160px;
+}
+#submit{
+    border: none;
+    color: white;
+    font-size: 14px;
+    padding: 5px;
+    border-radius: 3px;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHxmYJeLu_MuPRaMw7Qu4oD_pGjGZi2wOrWg&usqp=CAU");
+}
+#parent{
+    width: 40%;
+    margin: auto;
+}
+#parent>img{
+    width: 100%;
+}
