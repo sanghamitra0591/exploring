@@ -1,8 +1,8 @@
-import React from "react";
-import Axios from "axios";
-import "./Movies.css";
-import YouTube from "react-youtube";
-import movieTrailer from "movie-trailer";
+import React from "react"
+import Axios from "axios"
+import "./Movies.css"
+import YouTube from "react-youtube"
+import movieTrailer from "movie-trailer"
 
 const netflixOriginals= `https://api.themoviedb.org/3/discover/tv/?api_key=7406fa4cc728e291b9be19c886cf80e5&with_network=123`
 const myImageUrl= "https://image.tmdb.org/t/p/original";
@@ -47,7 +47,7 @@ function NetflixOriginals(){
                 const imageName =i.backdrop_path
                 return (
                     <div className="netflixOriginaldiv">
-                        <img  className="netflixOriginalimage" src={myImageUrl+imageName} onClick={function(){
+                        <img  className="netflixOriginalimage" alt="img" src={myImageUrl+imageName} onClick={function(){
                             playTheTrailer(i);
                         }}/>
                     </div>
