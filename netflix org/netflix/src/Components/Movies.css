@@ -1,0 +1,67 @@
+body{
+    background-color: #141414;
+    color: white;
+    margin: 10px;
+}
+.netflixOriginalimage, .TrendingNowimage, .ActionMoviesimage, .HorrorMoviesimage{
+    width: 170px;
+    height: 160px;
+}
+h1{
+    color: white;
+    font-size: 25px;
+    font-weight: 900;
+}
+.netflixOriginalimage:hover, .TrendingNowimage:hover, .ActionMoviesimage:hover, .HorrorMoviesimage:hover{
+    transform: scale(1.4);
+    transition-property: transform;
+    transition-duration: 2s;
+}
+.alldiv{
+    display: flex;
+    margin-bottom: 20px;
+    overflow: scroll;
+}
+.alldiv::-webkit-scrollbar{
+    overflow: hidden;
+}
+.netflixOriginaldiv, .TrendingNowdiv, .ActionMoviesdiv, .HorrorMoviesdiv{
+    margin: 7px;
+}
+#myNavbar{
+    position: fixed;
+    display: flex;
+}
+#myNavbar a{
+    color: white;
+    font-weight: 450;
+    font-size: 15px;
+}
+#MyImage{
+    width: 120px;
+    height: 60px;
+}
+.myLargeImage{
+    height: 500px;
+    width: 1700px;
+    margin-bottom: 20px;
+    position: relative;
+}
+h2{
+    font-size: 40px;
+    color: white;
+    text-transform: uppercase;
+    position: absolute;
+    top: 280px;
+    left: 40px;
+    font-weight: 900;
+}
+p{
+    position: absolute;
+    top: 330px;
+    left: 40px;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    width: 400px;
+}
