@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <div id="navparent"></div>
+    <div id="detailcontainer"></div>
+</body>
+</html>
+
+<script type="module">
+    let parent= document.getElementById("navparent");
+    import nav from './components/nav.js';
+    parent.innerHTML=nav();
+</script>
+<script src="./scripts/script.js"></script>
+
+<script>
+    let data= JSON.parse(localStorage.getItem('random')) || [];
+    let container= document.getElementById("detailcontainer");
+    function display(el){
+        container.innerHTML="";
+        let div1=document.createElement("div");
+        let div2=document.createElement("div");
+
+        let img=document.createElement("img");
+        img.src= el.strMealThumb;
+        let p=document.createElement("h2");
+        p.innerText= el.strMeal;
+        let head=document.createElement("h1");
+        head.innerText= "Instructions";
+        let instdiv=document.createElement("div");
+        let inst=document.createElement("p");
+        inst.innerText= el.strInstructions;
+        instdiv.append(inst);
+
+        div1.append(p, img);
+        div2.append(head, instdiv);
+        container.append(div1, div2);
+    }
+    display(data[0]);
+</script>

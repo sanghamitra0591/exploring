@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <div id="navparent"></div>
+    <div>
+        <input id="query" type="text" placeholder="Search for a Meal...">
+    </div>
+    <div id="container"></div>
+</body>
+</html>
+
+<script type="module">
+    let parent= document.getElementById("navparent");
+    import nav from './components/nav.js';
+    parent.innerHTML=nav();
+</script>
+
+<script type="module">
+    import getdata from './scripts/script.js';
+    let random= await getdata(`https://www.themealdb.com/api/json/v1/1/random.php`);
+    random=random.meals;
+    localStorage.setItem('random', JSON.stringify(random));
+
+
+    let searchbar= document.getElementById("query");
+    let container= document.getElementById("container");
+    searchbar.addEventListener('input', searchdata);
+    async function searchdata(){
+        let query=document.getElementById("query").value;
+        let searchdt= await getdata(`https://www.themealdb.com/api/json/v1/1/search.php?s=${query}`);
+        searchdt= searchdt.meals;
+        display(searchdt);
+    }
+
+    function display(data){
+        container.innerHTML="";
+        data.forEach((el)=>{
+            let div=document.createElement("div");
+            let img=document.createElement("img");
+            let p=document.createElement("p");
+
+            img.src= el.strMealThumb;
+            p.innerText= el.strMeal;
+            div.append(img, p);
+            container.append(div);
+
+            div.addEventListener('click', function(){
+                let storedata= JSON.parse(localStorage.getItem('detail')) || [];
+                storedata=el;
+                console.log('storedata:', storedata);
+                localStorage.setItem('detail', JSON.stringify(storedata));
+                window.location.assign("./detail.html");
+            });
+        })
+    }
+
+
+
+
+    let all=await getdata(`https://www.themealdb.com/api/json/v1/1/search.php?s=chicken`);
+    all= all.meals;
+    display(all);
+</script>
