@@ -5,6 +5,7 @@
     --red: #e01e5a;
     --background:  #4a154b;
 }
+
 *{
     margin: 0;
     padding: 0;
@@ -26,6 +27,7 @@ body{
     grid-template-columns: repeat(2,1fr); 
     border-radius: 50%;
 }
+
 .container > div{
      display: flex;
      align-items: flex-end;
