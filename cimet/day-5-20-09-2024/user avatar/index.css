@@ -1,0 +1,51 @@
+#wrapper {
+    border: 1px solid white;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    position: relative;
+}
+#container {
+    width: 40%;
+    height: 40%;
+    margin: auto;
+    margin-top: 150px;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 10px;
+    background-color: rgb(243, 224, 18);
+}
+#addUserPopup {
+    border: 1px solid white;
+    background-color: #fff;
+    display: none;
+    width: 20%;
+    height: 30%;
+    position: absolute;
+    top: 20%;
+    left: 40%;
+}
+.avatarBox {
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.avatar {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.avatar > p:nth-child(2){
+    background-color: yellow;
+    position: absolute;
+    top: -65%;
+    right : 5px;
+}
