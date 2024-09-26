@@ -1,0 +1,50 @@
+:root {
+    --hoverColor: #f04b66;
+}
+.container {
+    width: 100%;
+    margin: auto;
+    position: fixed;
+    background: #000;
+    padding: 8px 0px;
+    z-index: 1;
+}
+
+.container>div {
+    width: 65%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container>div>div:nth-child(1) {
+    width: 12%;
+}
+
+.container>div>div:nth-child(1)>img {
+    width: 100%;
+}
+
+.container>div>div:nth-child(2) {
+    width: 12%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container>div>div:nth-child(2)>div {
+    width: 12%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container>div>div:nth-child(2)>p>a {
+    color: white;
+    text-decoration: none;
+}
+
+.container>div>div:nth-child(2)>p>a:hover {
+    color: var(--hoverColor);
+}

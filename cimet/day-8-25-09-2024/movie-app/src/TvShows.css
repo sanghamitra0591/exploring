@@ -1,0 +1,31 @@
+.tvShowsWrapper {
+    width: 64%;
+    margin: auto;
+    padding: 20px;
+    color: white;
+    padding-top: 70px;
+}
+
+.tvShowsContainer {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+.filterContainer {
+    border: 0px solid white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.filterContainer>p {
+    font-size: 22px;
+}
+
+.filterContainer>div {
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

@@ -1,0 +1,37 @@
+.wrapper{
+    border: 1px solid black;
+    width: 100%;
+    background: #000;
+    color: white;
+}
+.wrapper>div {
+    width: 40%;
+    margin: auto;
+    padding: 20px 0px;
+}
+.wrapper > div > div:nth-child(1){
+    width: 60%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.wrapper>div>div:nth-child(1) > p:hover{
+    cursor: pointer;
+    color: rgb(240, 75, 102);
+}
+.wrapper>div>div:nth-child(2) {
+    width: 95%;
+    margin: auto;
+    text-align:center
+}
+.wrapper>div>div:nth-child(2) > p {
+    font-size: 16px;
+}
+.wrapper>div>div:nth-child(3) {
+    width: 30%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
