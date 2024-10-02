@@ -1,0 +1,12 @@
+.productCardWrapper{
+    border: 1px solid black;
+    text-align: center;
+    padding: 20px;
+}
+.productCardWrapper > img{
+    width: 200px;
+    height: 200px;
+}
+.productCardWrapper >button{
+    border: 1px solid black;
+}

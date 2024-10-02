@@ -1,0 +1,13 @@
+
+.productsWrapper{
+    width: 90%;
+    margin: auto;
+    text-align: center;
+}
+.productsContainer{
+    width: 95%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
