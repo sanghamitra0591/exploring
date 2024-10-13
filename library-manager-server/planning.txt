@@ -1,0 +1,27 @@
+library-management-system/
+│
+├── config/
+│   └── db.js              // MongoDB connection
+│
+├── controllers/
+│   ├── authController.js  // User authentication
+│   ├── bookController.js   // Book-related logic
+│   └── requestController.js // Book request handling
+│
+├── models/
+│   ├── User.js            // User schema
+│   ├── Book.js            // Book schema
+│   └── Request.js         // Request schema
+│
+├── middleware/
+│   ├── authMiddleware.js   // JWT verification and role checks
+│   └── errorMiddleware.js   // Error handling
+│
+├── routes/
+│   ├── authRoutes.js      // Authentication routes
+│   ├── bookRoutes.js      // Book routes
+│   └── requestRoutes.js    // Request routes
+│
+├── .env                    // Environment variables
+├── server.js              // Entry point of the application
+└── package.json
